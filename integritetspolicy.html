@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Integritetspolicy | Caldra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .policy { padding: 160px clamp(20px,6vw,96px) 120px; max-width: 780px; margin: 0 auto; }
+      .policy h1 { font: 400 clamp(2.4rem,5vw,3.6rem)/1 var(--display); text-transform: uppercase; letter-spacing: -.04em; margin-bottom: 32px; }
+      .policy h2 { font: 700 1.25rem var(--body); margin: 40px 0 12px; }
+      .policy p, .policy li { color: var(--mist); line-height: 1.7; }
+      .policy ul { padding-left: 20px; }
+      .policy a.back { display: inline-block; margin-bottom: 40px; color: var(--red-soft); font: 500 13px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+    </style>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Caldra startsida">
+        <span class="brand-mark">C</span>
+        <span>Caldra</span>
+      </a>
+    </header>
+    <main class="policy">
+      <a class="back" href="./index.html#kontakt">← Tillbaka till Caldra</a>
+      <h1>Integritetspolicy</h1>
+      <p>Den här policyn beskriver hur Caldra hanterar uppgifter som du lämnar via kontaktformuläret på den här sidan.</p>
+
+      <h2>Vilka uppgifter samlas in</h2>
+      <ul>
+        <li>Namn och företagsnamn</li>
+        <li>E-postadress och telefonnummer</li>
+        <li>Uppgifter du själv skriver i fritextfältet</li>
+        <li>Tekniska uppgifter som tidpunkt för inskick</li>
+      </ul>
+
+      <h2>Varför samlas uppgifterna in</h2>
+      <p>Uppgifterna används enbart för att kontakta dig om Caldras tjänst, till exempel för att boka in ett samtal eller demo. Ingen data säljs eller delas med tredje part för marknadsföringsändamål.</p>
+
+      <h2>Hur uppgifterna hanteras</h2>
+      <p>Formuläret skickar uppgifterna till ett internt arbetsflöde (n8n) som används för att kvalificera och följa upp din förfrågan. Uppgifterna sparas endast så länge det behövs för att hantera din förfrågan.</p>
+
+      <h2>Dina rättigheter</h2>
+      <p>Du har rätt att begära utdrag, rättelse eller radering av dina uppgifter. Kontakta oss via kontaktformuläret för att utöva dina rättigheter enligt GDPR.</p>
+
+      <h2>Kontakt</h2>
+      <p>Har du frågor om hur dina uppgifter hanteras, hör av dig via kontaktformuläret på startsidan.</p>
+    </main>
+    <footer>
+      <a class="brand footer-brand" href="./index.html"><span class="brand-mark">C</span><span>Caldra</span></a>
+      <p>Fler affärsmöjligheter förtjänar ett nästa steg.</p>
+      <span>© <span id="year"></span> Caldra</span>
+    </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>
