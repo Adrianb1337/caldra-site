@@ -129,7 +129,7 @@ input[type="range"]::-webkit-slider-thumb { appearance: none; width: 19px; heigh
 .lead-form button i { width: 25%; height: 2px; background: var(--red); transition: width .35s ease; }
 .lead-form button:hover i { width: 42%; }
 .lead-form button:active { transform: translateY(1px); }
-.form-success { display: none; margin-top: 18px; padding: 18px; border: 1px solid rgba(16,27,45,.25); gap: 5px; }
+.form-success { display: none; margin-top: 18px; padding: 18px; border: 1px solid rgba(16,27,45,.25); border-radius: 12px; gap: 5px; }
 .form-success.show { display: grid; }
 .form-success span { color: #4d5d69; }
 
