@@ -29,7 +29,8 @@ function updateCalculator() {
 Object.values(controls).forEach((control) => control.addEventListener("input", updateCalculator));
 updateCalculator();
 
-const N8N_WEBHOOK_URL = "https://adrian1337.app.n8n.cloud/webhook/lead-web-form";
+const pageLoadedAt = Date.now(); // används som enkel botspärr tillsammans med det dolda fältet "hp"
+const N8N_WEBHOOK_URL ="https://adrian1337.app.n8n.cloud/webhook/lead-web-form";
 const leadForm = document.querySelector("#lead-form");
 const formError = document.querySelector("#form-error");
 const formSuccess = document.querySelector("#form-success");
@@ -52,6 +53,7 @@ leadForm.addEventListener("submit", async (event) => {
   const payload = Object.fromEntries(new FormData(leadForm).entries());
   payload.source = "reclaim-landingpage";
   payload.submittedAt = new Date().toISOString();
+  payload.fillMs = Date.now() - pageLoadedAt;
 
   try {
     if (N8N_WEBHOOK_URL) {
