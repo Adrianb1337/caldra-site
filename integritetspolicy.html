@@ -9,11 +9,21 @@
     <link rel="stylesheet" href="./styles.css" />
     <style>
       .policy { padding: 160px clamp(20px,6vw,96px) 120px; max-width: 780px; margin: 0 auto; }
-      .policy h1 { font: 400 clamp(2.4rem,5vw,3.6rem)/1 var(--display); text-transform: uppercase; letter-spacing: -.04em; margin-bottom: 32px; }
+      /* Rubriken är ett långt ord, så storleken följer skärmbredden (ryms alltid) och får aldrig bredda sidan. */
+      .policy h1 { font: 400 clamp(1.4rem,6.4vw,3.6rem)/1.05 var(--display); text-transform: uppercase; letter-spacing: -.04em; margin-bottom: 32px; overflow-wrap: anywhere; hyphens: auto; }
       .policy h2 { font: 700 1.25rem var(--body); margin: 40px 0 12px; }
-      .policy p, .policy li { color: var(--mist); line-height: 1.7; }
+      .policy p, .policy li { color: var(--mist); line-height: 1.7; overflow-wrap: break-word; }
       .policy ul { padding-left: 20px; }
+      .policy a { overflow-wrap: anywhere; }
       .policy a.back { display: inline-block; margin-bottom: 40px; color: var(--red-soft); font: 500 13px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+      @media (max-width: 900px) { .policy { padding-top: 140px; padding-bottom: 96px; } }
+      @media (max-width: 640px) {
+        .policy { padding-top: 112px; padding-bottom: 64px; }
+        .policy a.back { margin-bottom: 28px; }
+        .policy h1 { margin-bottom: 24px; }
+        .policy h2 { font-size: 1.1rem; margin: 32px 0 10px; }
+        .policy p, .policy li { line-height: 1.65; }
+      }
     </style>
   </head>
   <body>
