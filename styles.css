@@ -80,6 +80,7 @@ h2 { font: 400 clamp(2.5rem,5.8vw,6rem)/.96 var(--display); letter-spacing: -.05
 .calc-heading { max-width: 860px; margin-bottom: 60px; }
 .calc-heading > p:last-child { max-width: 60ch; color: #4b5b66; }
 .calculator-shell { display: grid; grid-template-columns: 1.1fr .9fr; border: 1px solid rgba(16,27,45,.24); background: rgba(243,245,241,.62); }
+.calculator-shell > * { min-width: 0; }
 .calc-controls { padding: clamp(28px,5vw,70px); display: grid; gap: 16px; }
 .calc-controls label { display: flex; justify-content: space-between; gap: 20px; font-weight: 700; }
 .calc-controls output { font: 500 14px var(--mono); color: var(--red); }
@@ -90,7 +91,7 @@ input[type="range"]::-webkit-slider-thumb { appearance: none; width: 19px; heigh
 .result-caption { font: 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
 .calc-results > strong { font: 400 clamp(2.8rem,5.5vw,6rem)/1 var(--display); letter-spacing: -.055em; margin: 14px 0 28px; }
 .result-divider { height: 1px; background: rgba(243,245,241,.32); margin-bottom: 22px; }
-.result-row { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 11px; }
+.result-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; margin-bottom: 11px; }
 .result-row b { font-family: var(--mono); }
 .calc-results > p { color: rgba(243,245,241,.75); font-size: 13px; margin-top: 20px; }
 .calc-cta { display: flex; justify-content: space-between; align-items: center; margin-top: 26px; padding: 15px 17px; border: 1px solid rgba(243,245,241,.72); border-radius: 12px; font-weight: 700; transition: background .2s ease, color .2s ease; }

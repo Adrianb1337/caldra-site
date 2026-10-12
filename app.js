@@ -24,9 +24,21 @@ function updateCalculator() {
   document.querySelector("#risk-result").textContent = formatSEK.format(risk);
   document.querySelector("#recover-result").textContent = formatSEK.format(recoverable);
   document.querySelector("#time-result").textContent = `${formatNumber.format(manualHours)} timmar`;
+  fitRiskResult();
+}
+
+function fitRiskResult() {
+  const el = document.querySelector("#risk-result");
+  el.style.fontSize = "";
+  let size = parseFloat(getComputedStyle(el).fontSize);
+  while (el.scrollWidth > el.clientWidth && size > 18) {
+    size -= 1;
+    el.style.fontSize = `${size}px`;
+  }
 }
 
 Object.values(controls).forEach((control) => control.addEventListener("input", updateCalculator));
+window.addEventListener("resize", fitRiskResult);
 updateCalculator();
 
 const pageLoadedAt = Date.now(); // används som enkel botspärr tillsammans med det dolda fältet "hp"
